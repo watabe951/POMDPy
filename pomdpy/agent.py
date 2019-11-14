@@ -41,8 +41,8 @@ class Agent:
 
             if self.model.save:
                 save_pkl(solver.gamma,
-                         os.path.join(self.model.weight_dir,
-                                      'VI_planning_horizon_{}.pkl'.format(self.model.planning_horizon)))
+                        os.path.join(self.model.weight_dir,
+                        'VI_planning_horizon_{}.pkl'.format(self.model.planning_horizon)))
 
         elif not self.model.use_tf:
             self.multi_epoch()
@@ -58,12 +58,12 @@ class Agent:
         console(2, module, 'ave time/epoch: ' + str(self.experiment_results.time.mean))
 
         self.logger.info('env: ' + self.model.env + '\t' +
-                         'epochs: ' + str(self.model.n_epochs) + '\t' +
-                         'ave undiscounted return: ' + str(self.experiment_results.undiscounted_return.mean) + ' +- ' +
-                         str(self.experiment_results.undiscounted_return.std_err()) + '\t' +
-                         'ave discounted return: ' + str(self.experiment_results.discounted_return.mean) +
-                         ' +- ' + str(self.experiment_results.discounted_return.std_err()) +
-                         '\t' + 'ave time/epoch: ' + str(self.experiment_results.time.mean))
+                        'epochs: ' + str(self.model.n_epochs) + '\t' +
+                        'ave undiscounted return: ' + str(self.experiment_results.undiscounted_return.mean) + ' +- ' +
+                        str(self.experiment_results.undiscounted_return.std_err()) + '\t' +
+                        'ave discounted return: ' + str(self.experiment_results.discounted_return.mean) +
+                        ' +- ' + str(self.experiment_results.discounted_return.std_err()) +
+                        '\t' + 'ave time/epoch: ' + str(self.experiment_results.time.mean))
 
     def multi_epoch_tf(self):
         import tensorflow as tf

@@ -26,9 +26,9 @@ if __name__ == '__main__':
     parser.add_argument('--epsilon_decay_step', default=20, type=int)
     parser.add_argument('--n_sims', default=500, type=int,
                         help='For POMCP, this is the num of MC sims to do at each belief node. '
-                             'For SARSA, this is the number of rollouts to do per epoch')
+                            'For SARSA, this is the number of rollouts to do per epoch')
     parser.add_argument('--timeout', default=3600, type=int, help='Max num of sec the experiment should run before '
-                                                                  'timeout')
+                                                                'timeout')
     parser.add_argument('--preferred_actions', dest='preferred_actions', action='store_true', help='For RockSample, '
                                                     'specify whether smart actions should be used')
     parser.add_argument('--ucb_coefficient', default=3.0, type=float, help='Coefficient for UCB algorithm used by MCTS')
